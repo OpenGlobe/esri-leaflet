@@ -12,10 +12,10 @@ layout: example.hbs
   L.esri.basemapLayer('Streets').addTo(map);
 
   var trees = L.esri.featureLayer({
-    url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0'
+    url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0'
   }).addTo(map);
 
   trees.bindPopup(function (evt) {
-    return L.Util.template('<p>{COMMON_NAM}<br>{SCIENTIFIC}<br>{NOTES}</p>', evt.feature.properties);
+    return L.Util.template('<p>{FEDERAL_RE}<br>{PHONE1}<br>{WEBSITE}</p>', evt.feature.properties);
   });
 </script>
