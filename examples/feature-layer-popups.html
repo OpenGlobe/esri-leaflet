@@ -181,7 +181,7 @@
   }).addTo(map);
 
   trees.bindPopup(function (feature) {
-    return L.Util.template('<p>{COMMON_NAM}<br>{SCIENTIFIC}<br>{NOTES}</p>', feature.properties);
+    return L.Util.template('<p>{FEDERAL_RE}<br>{PHONE1}<br>{WEBSITE}</p>', feature.properties);
   });
 </script>
 
@@ -214,11 +214,11 @@
   L.esri.basemapLayer(<span class="string">'Streets'</span>).addTo(map);
 
   <span class="keyword">var</span> trees = L.esri.featureLayer({
-    url: <span class="string">'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0'</span>
+    url: <span class="string">'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0'</span>
   }).addTo(map);
 
   trees.bindPopup(<span class="function"><span class="keyword">function</span> <span class="params">(feature)</span> {</span>
-    <span class="keyword">return</span> L.Util.template(<span class="string">'&lt;p&gt;{COMMON_NAM}&lt;br&gt;{SCIENTIFIC}&lt;br&gt;{NOTES}&lt;/p&gt;'</span>, feature.properties);
+    <span class="keyword">return</span> L.Util.template(<span class="string">'&lt;p&gt;{FEDERAL_RE}&lt;br&gt;{PHONE1}&lt;br&gt;{WEBSITE}&lt;/p&gt;'</span>, feature.properties);
   });
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 
@@ -226,7 +226,7 @@
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
 
 <div class="wrap">
-  <p><a href="http://github.com/esri/esri-leaflet/edit/master/site/source/pages/examples/feature-layer-popups.hbs">Edit this sample on GitHub</a></p>
+  <p><a href="http://github.com/openglobe/esri-leaflet/edit/master/site/source/pages/examples/feature-layer-popups.hbs">Edit this sample on GitHub</a></p>
 </div>
 </div>
 
