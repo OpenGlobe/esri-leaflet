@@ -30,7 +30,7 @@
   }).addTo(map);
 
   trees.bindPopup(function (feature) {
-    return L.Util.template('<p>{FEDERAL_RE}<br>{PHONE_1}<br>{WEBSITE}</p>', feature.properties);
+    return L.Util.template('<p>{FEDERAL_RE}<br>{PHONE_1}<br><a href="{WEBSITE}">{WEBSITE}</p>', feature.properties);
   });
 </script>
 
