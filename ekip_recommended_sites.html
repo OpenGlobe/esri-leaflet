@@ -30,7 +30,7 @@
   }).addTo(map);
 
   trees.bindPopup(function (feature) {
-      return L.Util.template('<h3>{NAME}</h3><p>4th Grade Activities: {FRTHGRD_RE}<br>Facilities: {YOUTH_FACI}<br>Best times to visit: {BEST_TIMES}<br>Reservation required?{ADV_RES_RE}</p><p>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">{WEBSITE}</a></p>', feature.properties);
+      return L.Util.template('<h3>{NAME}</h3><p><b>4th Grade Activities:</b> {FRTHGRD_RE}<br><b>Facilities:</b> {YOUTH_FACI}<br><b>Best times to visit:</b> {BEST_TIMES}<br><b>Reservation required?</b>{ADV_RES_RE}</p><p>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">Website</a></p>', feature.properties);
   });
 </script>
 
