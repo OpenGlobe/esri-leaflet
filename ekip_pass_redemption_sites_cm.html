@@ -23,11 +23,7 @@
 <script>
   var map = L.map('map').setView([36.171299, -86.734134], 8);
     
-var logoIcon = new ekipIcon({iconUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png',
-      iconSize: [27, 31],
-      iconAnchor: [13.5, 17.5],
-      popupAnchor: [0, -11],                                 
-       });
+var logoIcon = new ekipIcon({iconUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png'});
     
 L.icon = function (options) {
     return new L.Icon(options);
