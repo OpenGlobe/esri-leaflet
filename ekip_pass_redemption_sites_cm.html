@@ -28,7 +28,10 @@ var logoIcon = new ekipIcon({iconUrl: 'http://openglobe.github.io/esri-leaflet/i
       iconAnchor: [13.5, 17.5],
       popupAnchor: [0, -11],                                 
        });
-
+    
+L.icon = function (options) {
+    return new L.Icon(options);
+};    
 
   L.esri.basemapLayer('Topographic').addTo(map);
 
@@ -37,6 +40,8 @@ var logoIcon = new ekipIcon({iconUrl: 'http://openglobe.github.io/esri-leaflet/i
   pointToLayer: function (geojson, latlng) {
       return L.marker(latlng, {
           icon: ekipIcon
+  });
+  },
   }).addTo(map);
 
   trees.bindPopup(function (feature) {
