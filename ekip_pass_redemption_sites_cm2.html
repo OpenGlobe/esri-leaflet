@@ -59,7 +59,7 @@ pointToLayer: function (geojson, latlng) {
   }).addTo(map);
 
   trees.bindPopup(function (feature) {
-    return L.Util.template('<h3><img src='http://openglobe.github.io/esri-leaflet/img/ekip_tree_sm.png' alt='4th Grade Pass Redemption Site!' width='24px'/>{FEDERAL_RE}</h3><p>{CITY_1}, {STATE}<br>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">{WEBSITE}</p>', feature.properties);
+    return L.Util.template('<h3><img src=\'http://openglobe.github.io/esri-leaflet/img/ekip_tree_sm.png\' alt=\'4th Grade Pass Redemption Site!\' width=\'24px\'/>{FEDERAL_RE}</h3><p>{CITY_1}, {STATE}<br>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">{WEBSITE}</p>', feature.properties);
   });
 </script>
 
