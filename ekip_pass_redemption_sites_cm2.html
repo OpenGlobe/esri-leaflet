@@ -25,7 +25,21 @@
 
   L.esri.basemapLayer('Topographic').addTo(map);
     
-var myIcon = L.icon({
+var searchControl = L.esri.Geocoding.Controls.geosearch({
+    providers: [
+      new L.esri.Geocoding.Controls.Geosearch.Providers.FeatureLayer({
+        url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
+        searchFields: ['FEDERAL_RE', 'CITY_1', 'STATE'],
+        label: 'EKIP Redemption Sites',
+        bufferRadius: 10000,
+        formatSuggestion: function(feature){
+          return feature.properties.FEDERAL_RE + ' - ' + feature.properties.CITY_1 + ', ' + feature.properties.STATE;
+        }
+      })
+    ]
+  });
+    
+    var myIcon = L.icon({
       iconUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png',
       iconRetinaUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png',
       iconSize: [40, 40],
