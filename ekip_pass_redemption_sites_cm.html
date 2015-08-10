@@ -23,8 +23,11 @@
 <script>
   var map = L.map('map').setView([36.171299, -86.734134], 8);
         
-  var ekipIcon = L.Icon({iconUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png',
-  iconSize: [40, 40]                        
+  var ekipIcon = L.Icon({
+      iconUrl: 'http://openglobe.github.io/esri-leaflet/img/ekipsmallwrd2.png',
+      iconSize: [40, 40],
+      iconAnchor: [20, 39],
+      popupAnchor: [-3, -33]
                         });   
     
   L.esri.basemapLayer('Topographic').addTo(map);
@@ -32,9 +35,9 @@
   var trees = L.esri.featureLayer({
     url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
   pointToLayer: function (geojson, latlng) {
-      return L.marker(latlng, {icon: ekipIcon});
+      return L.marker(latlng, {icon: ekipIcon}).addTo(map)
   },
-  }).addTo(map);
+  });
 
   trees.bindPopup(function (feature) {
     return L.Util.template('<h3>{FEDERAL_RE}</h3><p>{CITY_1}, {STATE}<br>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">{WEBSITE}</p>', feature.properties);
