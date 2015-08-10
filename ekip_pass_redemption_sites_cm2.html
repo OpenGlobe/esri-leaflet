@@ -25,6 +25,7 @@
 
 <script>
   var map = L.map('map').setView([38.987348, -76.941830], 5);
+  map.title('Voucher Redemption Sites');
 
   L.esri.basemapLayer('Topographic').addTo(map);
   
@@ -33,7 +34,7 @@ var searchControl = L.esri.Geocoding.Controls.geosearch({
       new L.esri.Geocoding.Controls.Geosearch.Providers.FeatureLayer({
         url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
         searchFields: ['FEDERAL_RE', 'CITY_1', 'STATE'],
-        label: 'EKIP Redemption Sites',
+        label: 'EKiP Voucher Redemption Sites',
         bufferRadius: 10000,
         formatSuggestion: function(feature){
           return feature.properties.FEDERAL_RE + ' - ' + feature.properties.CITY_1 + ', ' + feature.properties.STATE;
