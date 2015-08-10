@@ -27,8 +27,6 @@
   var map = L.map('map').setView([38.987348, -76.941830], 5);
 
   L.esri.basemapLayer('Topographic').addTo(map);
-    
-  L.esri.Controls.legend(['https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0'], {position: 'topright'}).addTo(map);
   
 var searchControl = L.esri.Geocoding.Controls.geosearch({
     providers: [
