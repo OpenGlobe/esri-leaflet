@@ -32,9 +32,7 @@
   var trees = L.esri.featureLayer({
     url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
   pointToLayer: function (geojson, latlng) {
-      return L.marker(latlng, {
-          icon: ekipIcon
-  });
+      return L.marker(latlng, {icon: ekipIcon});
   },
   }).addTo(map);
 
