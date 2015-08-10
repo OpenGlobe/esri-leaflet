@@ -35,9 +35,9 @@
   var trees = L.esri.featureLayer({
     url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
   pointToLayer: function (geojson, latlng) {
-      return L.marker(latlng, {icon: ekipIcon}).addTo(map)
-  },
-  });
+      return L.marker(latlng, {icon: ekipIcon});
+  };
+  }).addTo(map);
 
   trees.bindPopup(function (feature) {
     return L.Util.template('<h3>{FEDERAL_RE}</h3><p>{CITY_1}, {STATE}<br>{PHONE_1}<br><a href="{WEBSITE}" target="_blank">{WEBSITE}</p>', feature.properties);
