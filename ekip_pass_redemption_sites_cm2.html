@@ -34,7 +34,7 @@ var searchControl = L.esri.Geocoding.Controls.geosearch({
       new L.esri.Geocoding.Controls.Geosearch.Providers.FeatureLayer({
         url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/EKIP_PASS_ISSUANCE_YES_ONLY/FeatureServer/0',
         searchFields: ['FEDERAL_RE', 'CITY_1', 'STATE'],
-        label: 'EKiP Voucher Redemption Sites',
+        label: 'Places to Get a 4th Grade Pass',
         bufferRadius: 10000,
         formatSuggestion: function(feature){
           return feature.properties.FEDERAL_RE + ' - ' + feature.properties.CITY_1 + ', ' + feature.properties.STATE;
